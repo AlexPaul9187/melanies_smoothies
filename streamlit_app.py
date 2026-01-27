@@ -32,11 +32,11 @@ try:
         for fruit_chosen in ingredients_list:
             try:
                 # Make API request to get details about each fruit
-                fruityvice_response = requests.get(f"https://fruityvice.com/api/fruit/{fruit_name.lower()}")
-                fruityvice_response.raise_for_status()  # Raise an error for bad responses (4xx or 5xx)
+                smoothiefroot_response = requests.get(f"https://smoothiefroot.com/api/fruit/{fruit_name.lower()}")
+                smoothiefroot_response.raise_for_status()  # Raise an error for bad responses (4xx or 5xx)
                 
                 if fruityvice_response.status_code == 200:
-                    fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
+                    fv_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
                 else:
                     st.warning(f"Failed to fetch details for {fruit_chosen}")
             
