@@ -1,4 +1,4 @@
 #requirements.txt
-pip install streamlit 
+streamlit 
 snowflake-snowpark-python
 streamlit==1.31.1
